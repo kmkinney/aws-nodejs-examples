@@ -1,0 +1,8 @@
+{
+  "AWS": {
+    "region": "us-west-2"
+  },
+  "S3": {
+    "bucketName": "s3-bucket-name"
+  }
+}

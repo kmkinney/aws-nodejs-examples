@@ -13,10 +13,6 @@ const client = new S3Client({
 
 export const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Server listening");
-});
-
 router.get("/tree", async (req, res) => {
   try {
     let data = await readFile("./tree-data/KWJL-HRV.json").then((data) =>
