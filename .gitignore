@@ -1,5 +1,6 @@
 # Build
 build/
+data/
 
 # Logs
 logs
