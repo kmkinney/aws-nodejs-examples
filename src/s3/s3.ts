@@ -43,7 +43,7 @@ router.get("/", async (req, res) => {
         res.send(err);
         return [];
       });
-    console.log(JSON.stringify(trees[0]));
+//    console.log(JSON.stringify(trees[0]));
     res.send(`Number of trees downloaded is: ${trees.length}`);
   } catch (err) {
     res.status(500).send(err);
@@ -67,7 +67,8 @@ async function getPIDS() {
 function createGetRequest(pid: string): Promise<string> {
   const gzipped = new GetObjectCommand({
     Bucket: config.get("S3.bucketName"),
-    Key: `kevin-test-group/${pid}.gz`,
+    // Key: `kevin-test-group/${pid}.gz`,
+    Key: pid,
   });
   // const command = new GetObjectCommand({
   //   Bucket: "rf-tree-downloads",
@@ -76,7 +77,7 @@ function createGetRequest(pid: string): Promise<string> {
   return client
     .send(gzipped)
     .then((data) => {
-      console.log(`Converting to string pid: ${pid}`);
+//      console.log(`Converting to string pid: ${pid}`);
       return streamToString(data.Body);
     })
     .then((tree) => {

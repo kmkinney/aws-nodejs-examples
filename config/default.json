@@ -3,6 +3,6 @@
     "region": "us-west-2"
   },
   "S3": {
-    "bucketName": "rf-tree-downloads-stg"
+    "bucketName": "rf-tree-downloads"
   }
 }
