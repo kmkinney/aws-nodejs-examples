@@ -4,7 +4,7 @@
   "description": "Testing for s3 and redis caching",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin Kinney",
